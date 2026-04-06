@@ -1,0 +1,808 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'LXGW WenKai TC', sans-serif;
+    color: #363030;
+    scroll-behavior: smooth;
+}
+
+.background-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.bg-section {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bg-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: bottom;
+}
+
+.bg-section:last-child {
+    margin-top: -22.5%;
+}
+
+/* 导航栏样式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5vw;
+    background-color: rgba(0, 0, 0, 0.42);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Ma Shan Zheng', sans-serif;
+}
+
+/* .navbar-logo {
+    height: 3vw;
+    width: auto;
+}
+
+.navbar-title {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.navbar-title-main {
+    font-size: 20px;
+}
+
+.navbar-title-sub {
+    font-size: 16px;
+    opacity: 0.8;
+} */
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: opacity 0.3s;
+}
+
+.nav-item:hover {
+    opacity: 0.8;
+}
+
+.search-icon {
+    height: 24px;
+    width: auto;
+    cursor: pointer;
+}
+
+.music-icon {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.music-icon-svg {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+}
+
+/* 汉堡菜单样式 */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* 响应式样式 */
+@media screen and (max-width: 956px) {
+    .navbar {
+        height: 60px;
+        padding: 0 20px;
+    }
+
+    .navbar-logo {
+        height: 40px;
+    }
+
+    .navbar-title-main {
+        font-size: 16px;
+    }
+
+    .navbar-title-sub {
+        font-size: 12px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navbar-right {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+    }
+
+    .navbar-right.active {
+        right: 0;
+    }
+
+    .nav-item {
+        padding: 15px 20px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .search-icon {
+        margin: 15px auto;
+    }
+}
+
+/* 汉堡菜单激活状态 */
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* 介绍部分样式 */
+.intro-section {
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    display: flex;
+    gap: 4vw;
+    color: white;
+}
+
+.intro-left {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.intro-line {
+    max-width: 40%;
+}
+
+.intro-title {
+    margin: -2% 0 -4% -1%;
+    font-size: 2.5vw;
+    font-family: 'Ma Shan Zheng', sans-serif;
+}
+
+.intro-text {
+    margin-left: 0.5%;
+    font-size: 1vw;
+    line-height: 1.5;
+    text-align: justify;
+    height: 20vw;
+    overflow-y: auto;
+    font-size: 0.83vw;
+}
+
+/* 自定义滚动条样式 */
+.intro-text::-webkit-scrollbar {
+    width: 6px;
+}
+
+.intro-text::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.intro-text::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.intro-text::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.intro-right {
+    flex: 3.2;
+    margin-top: 12%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 0.35fr);
+    column-gap: 0.8vw;
+}
+
+.intro-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5vw;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.intro-image:hover {
+    transform: scale(1.05);
+}
+
+/* 发展历程部分样式 */
+.history-section {
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.history-title {
+    width: 100%;
+    height: auto;
+}
+
+.history-title img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 八大作部分样式 */
+.works-section {
+    position: absolute;
+    top: 46.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.works-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-title-bg {
+    width: 20vw;
+    height: auto;
+}
+
+.works-title-text {
+    position: absolute;
+    margin: -2.4% auto auto -0.8%;
+    font-size: 2.5vw;
+    font-family: 'Ma Shan Zheng', sans-serif;
+}
+
+.works-intro {
+    margin: -3.6% auto;
+    font-size: 1vw;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 90%;
+}
+
+.works-copyright-tip {
+    margin: -2% 0;
+    font-size: 0.7vw;
+    line-height: 1.8;
+    text-align: right;
+    max-width: 100%;
+}
+
+.works-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2vw;
+}
+
+.work-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+.work-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2/2.96;
+    border-radius: 0.5vw;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.work-image-container:hover {
+    transform: scale(1.05);
+}
+
+.work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0.42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9vw;
+    font-family: 'Ma Shan Zheng', sans-serif;
+    letter-spacing: 1.2vw;
+    padding-left: 0.6vw;
+    margin-right: -0.6vw;
+}
+
+.work-dot {
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.work-desc {
+    font-size: 1vw;
+    text-align: center;
+}
+
+/* 古建保护部分样式 */
+.protect-section {
+    position: absolute;
+    top: 67.2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.protect-title {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.protect-title-bg {
+    width: 20vw;
+    height: auto;
+}
+
+.protect-title-text {
+    position: absolute;
+    margin: -2.4% auto auto -2.8%;
+    font-size: 2.5vw;
+    font-family: 'Ma Shan Zheng', sans-serif;
+}
+
+.protect-intro {
+    width: 70%;
+    margin: -3% auto;
+    font-size: 1vw;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 42%;
+}
+
+.protect-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.protect-row {
+    display: flex;
+    width: 100%;
+    gap: 0;
+}
+
+.protect-item {
+    flex: 1;
+    position: relative;
+    aspect-ratio: 1/1.04;
+}
+
+/* 第一行的文字部分（偶数项） */
+.protect-row:first-child .protect-item:nth-child(even) {
+    flex: 0.75;
+}
+
+/* 第二行的文字部分（奇数项） */
+.protect-row:last-child .protect-item:nth-child(odd) {
+    flex: 0.75;
+}
+
+.protect-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1.04;
+}
+
+.protect-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.protect-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 3vw;
+    font-family: 'Ma Shan Zheng', sans-serif;
+    letter-spacing: 0.5vw;
+}
+
+.protect-text {
+    background-color: rgba(255, 255, 255, 0.42);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1.4vw;
+    box-sizing: border-box;
+    display: block;
+    text-align: justify;
+    font-size: 1vw;
+    line-height: 1.32;
+    overflow-y: auto;
+}
+
+/* 自定义滚动条样式 */
+.protect-text::-webkit-scrollbar {
+    width: 6px;
+}
+
+.protect-text::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.protect-text::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.protect-text::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* 游戏区样式 */
+.game-section {
+    position: absolute;
+    top: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vw;
+}
+
+.game-title {
+    font-size: 2.5vw;
+    font-family: 'Ma Shan Zheng', sans-serif;
+}
+
+.game-line {
+    max-width: 12%;
+    margin: -4% 0 1% 0.4%;
+}
+
+.game-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.game-cards {
+    display: flex;
+    gap: 2vw;
+    align-items: flex-start;
+}
+
+.game-card {
+    position: relative;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    cursor: pointer;
+}
+
+.game-card:hover img {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    /* border-radius: 0.5vw; */
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.game-card-desc {
+    width: 100%;
+    padding: 0.5vw;
+    font-size: 1.6vw;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.game-more {
+    margin-top: -2%;
+    width: 100%;
+    text-align: right;
+    font-family: 'Ma Shan Zheng', sans-serif;
+    font-size: 1.6vw;
+    color: white;
+    opacity: 0.8;
+}
+
+/* 游戏容器样式 */
+#game-youzuo, #game-muzuo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: none;
+}
+
+.game-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.game-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.game-close-btn::before,
+.game-close-btn::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: white;
+}
+
+.game-close-btn::before {
+    transform: rotate(45deg);
+}
+
+.game-close-btn::after {
+    transform: rotate(-45deg);
+}
+
+/* 当游戏div打开时禁用整个body的滚动 */
+.body-no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+/* 页脚样式 */
+.footer {
+    position: absolute;
+    top: 97.4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    padding: 2vw 0;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.footer-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* .footer-logo {
+    max-height: 3vw;
+    max-width: 3vw;
+}
+
+.footer-title {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ma Shan Zheng', sans-serif;
+}
+
+.footer-title-main {
+    font-size: 1.6vw;
+}
+
+.footer-title-sub {
+    font-size: 1.4vw;
+} */
+
+.footer-links {
+    display: flex;
+    margin: 3% auto 0 0;
+    gap: 1vw;
+    font-size: 1vw;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-link:hover {
+    opacity: 0.8;
+}
+
+.footer-divider {
+    width: 120%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0.5vw 0;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    font-size: 0.9vw;
+    opacity: 0.8;
+}
+
+.footer-right {
+    display: flex;
+    align-items: flex-end;
+    gap: 1vw;
+    margin: auto 0 0 0;
+}
+
+.footer-qrcode-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1vw;
+    line-height: 1.5;
+    text-align: right;
+    margin-bottom: -0.2vw;
+}
+
+.footer-qrcode {
+    max-width: 6vw;
+    max-height: 6vw;
+    object-fit: contain;
+}
+
+/* 团队弹窗样式 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 4% 12% 4% 4%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    max-height: 90vh;
+    position: relative;
+}
+
+.team-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}

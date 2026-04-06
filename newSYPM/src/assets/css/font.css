@@ -1,0 +1,29 @@
+/* 全局字体配置 */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('@/assets/font/myfont.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 字体回退机制 */
+:root {
+  --font-family-primary: 'MyCustomFont', 'Segoe UI', 'Noto Sans CJK SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-family-secondary:'Microsoft YaHei', 'Segoe UI', 'Noto Sans CJK SC', 'PingFang SC', sans-serif;
+}
+
+/* 全局字体应用 */
+* {
+  font-family: var(--font-family-secondary);
+}
+
+/* 标题字体 */
+h1, h2, h3, h4, h5, h6 ,span {
+  /* font-family: var(--font-family-primary); */
+}
+
+/* 正文字体 */
+p, div, a, button {
+  /* font-family: var(--font-family-primary); */
+}

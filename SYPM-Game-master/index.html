@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>东北大学大创组</title>
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <link rel="icon" href="assets/img/common/logo.png" type="image/x-icon">
+    <script type="module" src="/src/main.ts" async></script>
+    <script defer src="https://umami.amoe.cc/script.js" data-website-id="2bd1866b-0aea-4df4-932a-9a8a1cd51442"></script>
+</head>
+<body>
+    <!-- 音频元素 -->
+    <audio id="bg-page" loop>
+        <source src="assets/audio/bg-page.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bg-game-1" loop>
+        <source src="assets/audio/bg-game-1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bg-game-2" loop>
+        <source src="assets/audio/bg-game-2.mp3" type="audio/mpeg">
+    </audio>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <!-- <img src="assets/img/common/logo.png" alt="Logo" class="navbar-logo">
+            <div class="navbar-title">
+                <span class="navbar-title-main">东北大学大创组</span>
+                <span class="navbar-title-sub">NEU TI-Group</span>
+            </div> -->
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar-right">
+            <a href="/" class="nav-item">首页</a>
+            <a href="#intro" class="nav-item">简介</a>
+            <a href="#history" class="nav-item">发展历程</a>
+            <a href="#works" class="nav-item">八大作</a>
+            <a href="#protect" class="nav-item">古建保护</a>
+            <a href="#game" class="nav-item">小游戏</a>
+            <img src="assets/img/common/search.png" alt="Search" class="search-icon">
+            <a href="#lang" class="nav-item">Language</a>
+            <div class="music-icon" id="music-toggle">
+                <img src="assets/img/common/play.svg" alt="Music" class="music-icon-svg">
+            </div>
+        </div>
+    </nav>
+    <div class="background-container">
+        <div class="bg-section">
+            <img src="assets/img/homepage/bg1.png" alt="Background 1">
+        </div>
+        <div class="bg-section">
+            <img src="assets/img/homepage/bg2.png" alt="Background 2">
+            <section id="intro" class="intro-section">
+                <div class="intro-left">
+                    <img src="assets/img/homepage/intro-line.png" alt="Decorative Line" class="intro-line">
+                    <h2 class="intro-title">简要介绍</h2>
+                    <p class="intro-text">
+                        中国传统建筑营造技艺是以木材为主要建筑材料，以榫卯为木构件的主要结合方法，以模数制为尺度设计和加工生产手段的建筑营造技术体系。它不仅包括设计和建造两重涵义，还涉及选址、布局、尺度等方面，反映了中国传统建筑设计与施工、技术与艺术的高度统一。<br/>
+                        <br/>
+                        榫卯结构：<br/>
+                        榫卯结构是中国传统建筑营造技艺的核心，它通过凸出的榫头和凹进的卯眼相互嵌合，使木构件紧密结合，无需钉子和胶水，不仅结构牢固，还便于拆卸和重组。<br/>
+                        <br/>
+                        模数制设计：<br/>
+                        传统建筑营造技艺采用模数制，以斗拱构件八等级的“材”作为模数标准，匠人可按此预制构件，简化了施工程序。<br/>
+                        <br/>
+                        八大作施工：<br/>
+                        营造技艺的施工过程主要以“八大作”为主，即木作、瓦作、石作、土作、油漆作、彩画作、搭材作、裱糊作。
+                    </p>
+                </div>
+                <div class="intro-right">
+                    <img src="assets/img/homepage/intro1.png" alt="Intro Image 1" class="intro-image">
+                    <img src="assets/img/homepage/intro2.png" alt="Intro Image 2" class="intro-image">
+                    <img src="assets/img/homepage/intro3.png" alt="Intro Image 3" class="intro-image">
+                    <img src="assets/img/homepage/intro4.png" alt="Intro Image 4" class="intro-image">
+                    <img src="assets/img/homepage/intro5.png" alt="Intro Image 5" class="intro-image">
+                    <img src="assets/img/homepage/intro6.png" alt="Intro Image 6" class="intro-image">
+                </div>
+            </section>
+            <section id="history" class="history-section">
+                <div class="history-title">
+                    <img src="assets/img/homepage/history.png" alt="发展历程">
+                </div>
+            </section>
+            <section id="works" class="works-section">
+                <div class="works-title">
+                    <img src="assets/img/homepage/works-title.png" alt="八大作背景" class="works-title-bg">
+                    <span class="works-title-text">八大作</span>
+                </div>
+                <p class="works-intro">
+                    中国传统建筑营造技艺中的“八大作”是指古建筑营造过程中八大主要工序的合称，这些技艺在明清时期逐渐成熟并广泛应用于官式建筑的建造和修缮中。<br/>
+                    如今，这些技艺已被列为非物质文化遗产，得到了更好的保护和传承。
+                </p>
+                <p class="works-copyright-tip">
+                    （图片来自北京故宫纪录片《八大作》）
+                </p>
+                <div class="works-grid">
+                    <div class="work-item">
+                        <div class="work-image-container">
+                            <img src="assets/img/homepage/work1.png" alt="土作" class="work-image">
+                            <div class="work-overlay">土作</div>
+                        </div>
+                        <div class="work-dot"></div>
+                        <div class="work-desc">土作是传统建筑中关于台基、地基等土方工程的营造技艺，可以使地基坚固、耐久、稳定，成为承载连绵殿宇的重要根基。</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image-container">
+                            <img src="assets/img/homepage/work2.png" alt="石作" class="work-image">
+                            <div class="work-overlay">石作</div>
+                        </div>
+                        <div class="work-dot"></div>
+                        <div class="work-desc">石作是关于石构件制作、表面处理和安装的营造技艺，可以将糙石变为建筑下的精美石基，体现了石作的“稳而持重”。</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image-container">
+                            <img src="assets/img/homepage/work3.png" alt="木作" class="work-image">
+                            <div class="work-overlay">木作</div>
+                        </div>
+                        <div class="work-dot"></div>
+                        <div class="work-desc">木作是中国传统木结构建筑营缮中的主作，榫卯是其核心技艺，常用锛、凿、锯、刨等工具，诠释了“方寸之合”的营造智慧。</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image-container">
+                            <img src="assets/img/homepage/work4.png" alt="瓦作" class="work-image">
+                            <div class="work-overlay">瓦作</div>
+                        </div>
+                        <div class="work-dot"></div>
+                        <div class="work-desc">瓦作是传统建筑中砌砖墁地的营造技艺，它保护着木质屋顶和飞檐，通过苫背和瓦瓦的技艺形成了传统建筑的恢弘屋面。</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image-container">
+                            <img src="assets/img/homepage/work5.png" alt="搭材作" class="work-image">
+                            <div class="work-overlay">搭材作</div>
+                        </div>
+                        <div class="work-dot"></div>
+                        <div class="work-desc">搭材作是传统建筑中以架木搭设、扎彩、棚匠为内容的营造技艺。它不仅用于搭扎彩棚，还在建筑施工中搭建脚手架。</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image-container">
+                            <img src="assets/img/homepage/work6.png" alt="油作" class="work-image">
+                            <div class="work-overlay">油作</div>
+                        </div>
+                        <div class="work-dot"></div>
+                        <div class="work-desc">油作是为保护木构件而施以地仗油饰的营造技艺，通过熬制灰油、披麻捉灰、光三遍油的过程，形成了“厚薄有度”的油饰面。</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image-container">
+                            <img src="assets/img/homepage/work7.png" alt="彩画作" class="work-image">
+                            <div class="work-overlay">彩画作</div>
+                        </div>
+                        <div class="work-dot"></div>
+                        <div class="work-desc">彩画作是传统建筑中绘制彩画的营造技艺。彩画的绘制过程，包括贴金、打金胶油等工序，体现了彩画作的精细与华丽。</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image-container">
+                            <img src="assets/img/homepage/work8.png" alt="裱糊作" class="work-image">
+                            <div class="work-overlay">裱糊作</div>
+                        </div>
+                        <div class="work-dot"></div>
+                        <div class="work-desc">裱糊作是传统建筑中对室内装饰的营造技艺，包括裱糊底纸等工序，具有“柔外韧内”的特点。</div>
+                    </div>
+                </div>
+            </section>
+            <section id="protect" class="protect-section">
+                <div class="protect-title">
+                    <img src="assets/img/homepage/protect-title.png" alt="古建保护背景" class="protect-title-bg">
+                    <span class="protect-title-text">古建保护</span>
+                </div>
+                <p class="protect-intro">
+                    中国传统古建筑的保护工作是指针对历史建筑的维护、修复与合理利用的系统性活动，这些工作在近现代逐渐形成科学化、规范化的体系，并在国家政策支持与社会力量参与下不断推进。<br/>
+                    如今，古建筑保护已成为文化遗产保护的重要组成部分，得到了全社会的高度重视与积极践行。
+                </p>
+                <div class="protect-grid">
+                    <div class="protect-row">
+                        <div class="protect-item">
+                            <div class="protect-image-container">
+                                <img src="assets/img/homepage/protect1.png" alt="理念与原则" class="protect-image">
+                                <div class="protect-image-overlay">理念与原则</div>
+                            </div>
+                        </div>
+                        <div class="protect-item">
+                            <div class="protect-text">
+                                ·尊重历史、保留原真性<br/>
+                                根据《中国文物保护法》等法规文件，我国古建筑遵循“<font color="red">不改变文物原状</font>”的原则。<br/>
+                                ·原真性，即最大限度保留古建筑的原有形制、结构、材料和工艺；<br/>
+                                ·整体性，不仅要保护建筑本身，还要保护其周边环境和文化氛围；<br/>
+                                ·预防为主，通过日常保养和定期维护，将隐患消灭在萌芽状态；<br/>
+                                ·最小干预，在修复过程中减少对建筑本体的干预，确保古建筑在修缮后能够长期稳定。
+                            </div>
+                        </div>
+                        <div class="protect-item">
+                            <div class="protect-image-container">
+                                <img src="assets/img/homepage/protect2.png" alt="方法与技术" class="protect-image">
+                                <div class="protect-image-overlay">方法与技术</div>
+                            </div>
+                        </div>
+                        <div class="protect-item">
+                            <div class="protect-text">
+                                ·<font color="red">科学保护&有效修复</font><br/>
+                                ·优先采用传统工艺和材料，保留古建筑的历史风貌和文化内涵。例如，木结构的榫卯工艺、砖石结构的剔补技术等传统技艺;<br/>
+                                ·利用现代科技手段为保护工作提供支持。例如，采用三维测绘、激光扫描等技术进行古建筑的前期诊断，为修复方案提供精准数据；<br/>
+                                ·注重其消防安全和结构安全。例如，通过改造消防设施、设置避雷装置等方式，降低古建筑面临的风险。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="protect-row">
+                        <div class="protect-item">
+                            <div class="protect-text">
+                                古代各王朝制定的建筑制度做法、工料定额一类的建筑法规，如《考工记》《营造法式》《园冶》等，以及近现代的许多著名匠师，为古建保护作出巨大贡献。<br/>
+                                ·林徽因与梁思成是中国古建筑保护的先驱。通过对数百座古建筑进行调查、测绘和研究，发现了佛光寺东大殿等重要建筑，形成了“<font color="red">保存现状，恢复原状</font>”的保护思想。<br/>
+                                ·王时伟先生在故宫博物院主持了倦勤斋保护工程、乾隆花园修缮等重要项目。他在实践中引入数字化技术，推动了古建筑保护的现代化。<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......
+                            </div>
+                        </div>
+                        <div class="protect-item">
+                            <div class="protect-image-container">
+                                <img src="assets/img/homepage/protect3.png" alt="人物与研究" class="protect-image">
+                                <div class="protect-image-overlay">人物与研究</div>
+                            </div>
+                        </div>
+                        <div class="protect-item">
+                            <div class="protect-text">
+                                古建筑保护需要<font color="red">全社会的广泛参与和有效的传承机制</font>，以实现文化遗产的可持续发展。<br/>
+                                ·故宫博物院通过举办各类展览和文化活动，提升了公众对古建筑保护的意识。<br/>
+                                ·杜仙洲先生通过编写《中国古建筑修缮技术》等教材和培养专业人才，为中国古建筑保护事业奠定了坚实的人才基础。<br/>
+                                ·林徽因曾对中国历代装饰图案进行了研究，这些工作不仅保护了传统工艺，还推动了传统文化的创新发展。<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......
+                            </div>
+                        </div>
+                        <div class="protect-item">
+                            <div class="protect-image-container">
+                                <img src="assets/img/homepage/protect4.png" alt="参与与传承" class="protect-image">
+                                <div class="protect-image-overlay">参与与传承</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="game" class="game-section">
+                <h2 class="game-title">游戏区</h2>
+                <img src="assets/img/homepage/game-line.png" alt="Decorative Line" class="game-line">
+                <div class="game-content">
+                    <div class="game-cards">
+                        <div class="game-card">
+                            <a href="javascript:showGame('game-youzuo')">
+                                <img src="assets/img/homepage/game1.png" alt="漆彩匠心">
+                            </a>
+                            <div class="game-card-desc">漆彩匠心</div>
+                        </div>
+                        <div class="game-card">
+                            <a href="javascript:showGame('game-muzuo')">
+                                <img src="assets/img/homepage/game2.png" alt="榫卯大师">
+                            </a>
+                            <div class="game-card-desc">榫卯大师</div>
+                        </div>
+                    </div>
+                    <p class="game-more">更多八大作小游戏，敬请期待……</p>
+                </div>
+            </section>
+            <!-- 游戏容器 -->
+            <div id="game-youzuo">
+                <div id="game-youzuo-container"></div>
+            </div>
+            <div id="game-muzuo">
+                <div id="game-muzuo-container"></div>
+            </div>
+            <footer class="footer">
+                <div class="footer-left">
+                    <div class="footer-logo-section">
+                        <!-- <img src="assets/img/common/logo.png" alt="Logo" class="footer-logo">
+                        <div class="footer-title">
+                            <span class="footer-title-main">东北大学大创组</span>
+                            <span class="footer-title-sub">NEU TI-Group</span>
+                        </div> -->
+                    </div>
+                    <div class="footer-links">
+                        <a href="#privacy" class="footer-link">隐私政策</a>
+                        <span>/</span>
+                        <a href="#team" class="footer-link">创作团队</a>
+                        <span>/</span>
+                        <a href="#copyright" class="footer-link">版权声明</a>
+                        <span>/</span>
+                        <a href="https://umami.amoe.cc/share/TRmwB5gIaOQNnTHr/sypm.amoe.cc" class="footer-link" target="_blank">访问统计</a>
+                    </div>
+                    <div class="footer-divider"></div>
+                    <div class="footer-info">
+                        <span>地址：辽宁省沈阳市浑南区创新路195号    邮政编码：110000</span>
+                        <span>网址：https://www.sypm.amoe.cc</span>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-qrcode-text">
+                        <span>扫描二维码</span>
+                        <span>进入《营 · 造》网页端</span>
+                    </div>
+                    <img src="assets/img/common/site-url-qrcode.png" alt="QR Code" class="footer-qrcode">
+                </div>
+            </footer>
+        </div>
+        <div class="bg-section">
+            <img src="assets/img/homepage/bg3.png" alt="Background 3">
+        </div>
+    </div>
+    <!-- 团队弹窗 -->
+    <div id="team-modal" class="modal">
+        <div class="modal-content">
+            <img src="assets/img/homepage/team.png" alt="创作团队" class="team-image">
+        </div>
+    </div>
+</body>
+<script>
+    // 音乐控制
+    let currentAudio = null;
+    let isInitialized = false;
+    let wasBgMusicPlaying = false; // 记录背景音乐是否在播放
+    const musicToggle = document.getElementById('music-toggle');
+    const bgPage = document.getElementById('bg-page');
+    const bgGame1 = document.getElementById('bg-game-1');
+    const bgGame2 = document.getElementById('bg-game-2');
+
+    // 初始化音乐
+    function initMusic() {
+        if (!isInitialized) {
+            currentAudio = bgPage;
+            isInitialized = true;
+        }
+    }
+
+    // 渐入渐出效果
+    async function fadeInOut(audio, isFadeIn, duration = 500) {
+        const startVolume = isFadeIn ? 0 : audio.volume;
+        const endVolume = isFadeIn ? 1 : 0;
+        const steps = 20;
+        const stepTime = duration / steps;
+        const volumeStep = (endVolume - startVolume) / steps;
+
+        for (let i = 0; i <= steps; i++) {
+            audio.volume = startVolume + (volumeStep * i);
+            await new Promise(resolve => setTimeout(resolve, stepTime));
+        }
+    }
+
+    // 播放音乐
+    async function playMusic(audio) {
+        if (audio) {
+            audio.volume = 0;
+            try {
+                await audio.play();
+                await fadeInOut(audio, true);
+                musicToggle.classList.remove('paused');
+                musicToggle.querySelector('.music-icon-svg').src = 'assets/img/common/pause.svg';
+                // 如果是背景音乐，记录其播放状态
+                if (audio === bgPage) {
+                    wasBgMusicPlaying = true;
+                }
+            } catch (error) {
+                // 自动播放失败时不改变按钮状态
+                document.addEventListener('click', function startMusic() {
+                    audio.play();
+                    fadeInOut(audio, true);
+                    musicToggle.classList.remove('paused');
+                    musicToggle.querySelector('.music-icon-svg').src = 'assets/img/common/pause.svg';
+                    // 如果是背景音乐，记录其播放状态
+                    if (audio === bgPage) {
+                        wasBgMusicPlaying = true;
+                    }
+                    document.removeEventListener('click', startMusic);
+                }, { once: true });
+            }
+        }
+    }
+
+    // 音乐控制按钮点击事件
+    musicToggle.addEventListener('click', async function() {
+        if (currentAudio) {
+            if (currentAudio.paused) {
+                currentAudio.play();
+                await fadeInOut(currentAudio, true);
+                musicToggle.classList.remove('paused');
+                musicToggle.querySelector('.music-icon-svg').src = 'assets/img/common/pause.svg';
+                // 如果是背景音乐，记录其播放状态
+                if (currentAudio === bgPage) {
+                    wasBgMusicPlaying = true;
+                }
+            } else {
+                await fadeInOut(currentAudio, false);
+                currentAudio.pause();
+                musicToggle.classList.add('paused');
+                musicToggle.querySelector('.music-icon-svg').src = 'assets/img/common/play.svg';
+                // 如果是背景音乐，记录其暂停状态
+                if (currentAudio === bgPage) {
+                    wasBgMusicPlaying = false;
+                }
+            }
+        }
+    });
+
+    // 修改 showGame 函数以处理音乐切换
+    async function showGame(name) {
+        if (name == 'game-youzuo' || name == 'game-muzuo') {
+            document.getElementById(name).style.display = 'block';
+            document.body.classList.add('body-no-scroll');
+            document.body.classList.add('game-opened');
+            
+            // 记录当前背景音乐的播放状态
+            if (currentAudio === bgPage) {
+                wasBgMusicPlaying = !currentAudio.paused;
+            }
+            
+            // 停止当前音乐
+            if (currentAudio) {
+                await fadeInOut(currentAudio, false);
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+            
+            // 播放对应游戏音乐
+            if (name == 'game-youzuo') {
+                currentAudio = bgGame1;
+            } else {
+                currentAudio = bgGame2;
+            }
+            
+            // 播放新音乐
+            await playMusic(currentAudio);
+            
+            return;
+        }
+        alert('未定义的游戏');
+        return;
+    }
+
+    // 初始化
+    document.addEventListener('DOMContentLoaded', function() {
+        initMusic();
+        playMusic(currentAudio);
+
+        // 团队弹窗控制
+        const teamModal = document.getElementById('team-modal');
+        const teamLink = document.querySelector('a[href="#team"]');
+
+        // 点击"创作团队"链接时显示弹窗
+        teamLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            teamModal.style.display = 'flex';
+            document.body.classList.add('body-no-scroll');
+        });
+
+        // 点击弹窗外区域关闭弹窗
+        teamModal.addEventListener('click', function(e) {
+            if (e.target === teamModal) {
+                teamModal.style.display = 'none';
+                document.body.classList.remove('body-no-scroll');
+            }
+        });
+
+        // 监听 body 类的变化
+        const observer = new MutationObserver(async (mutations) => {
+            mutations.forEach(async (mutation) => {
+                if (mutation.attributeName === 'class') {
+                    const oldClasses = mutation.oldValue ? mutation.oldValue.split(' ') : [];
+                    const newClasses = [...document.body.classList];
+                    
+                    // 检查game-opened类的变化
+                    const wasGameOpened = oldClasses.includes('game-opened');
+                    const isGameOpened = newClasses.includes('game-opened');
+                    
+                    // 只在game-opened状态发生变化时处理音乐
+                    if (wasGameOpened !== isGameOpened && !isGameOpened) {
+                        // 当game-opened类被移除时，说明游戏已关闭
+                        if (currentAudio) {
+                            await fadeInOut(currentAudio, false);
+                            currentAudio.pause();
+                            currentAudio.currentTime = 0;
+                        }
+                        currentAudio = bgPage;
+                        // 根据之前的状态决定是否播放
+                        if (wasBgMusicPlaying) {
+                            await playMusic(currentAudio);
+                        } else {
+                            musicToggle.classList.add('paused');
+                            musicToggle.querySelector('.music-icon-svg').src = 'assets/img/common/play.svg';
+                        }
+                    }
+                }
+            });
+        });
+
+        observer.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['class'],
+            attributeOldValue: true
+        });
+
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navbarRight = document.querySelector('.navbar-right');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navbarRight.classList.toggle('active');
+        });
+
+        // 点击导航项时关闭菜单并平滑滚动
+        navItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                // 关闭菜单
+                hamburger.classList.remove('active');
+                navbarRight.classList.remove('active');
+                
+                // 获取目标位置
+                const href = this.getAttribute('href');
+                if (href !== '/' && href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        // 更新URL
+                        history.pushState(null, '', href);
+                        
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 70;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    });
+
+    // 当游戏div打开时禁用整个body的滚动
+</script>
+</html>

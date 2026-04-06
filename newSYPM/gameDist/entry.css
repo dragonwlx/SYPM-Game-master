@@ -1,0 +1,115 @@
+:root {
+    --bg: #1a1510;
+    --accent: #c9a227;
+    --accent-dim: #8b6914;
+    --text: #f5f0e6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'jiangxizhuokai', 'Segoe UI', system-ui, sans-serif;
+    color: var(--text);
+}
+
+body.body-no-scroll {
+    overflow: hidden;
+}
+
+.entry-wrap {
+    text-align: center;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry-wrap.entry-hidden {
+    display: none;
+}
+
+.entry-wrap h1 {
+    font-weight: 600;
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    letter-spacing: 0.12em;
+    margin: 0 0 2rem;
+    opacity: 0.92;
+}
+
+.btn-open-game {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.85rem 2.25rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--bg);
+    background: linear-gradient(165deg, #e8d48b 0%, var(--accent) 45%, var(--accent-dim) 100%);
+    border-radius: 999px;
+    box-shadow:
+        0 4px 0 #5c4a1a,
+        0 8px 24px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.btn-open-game:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 6px 0 #5c4a1a,
+        0 12px 28px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-open-game:active {
+    transform: translateY(1px);
+    box-shadow:
+        0 2px 0 #5c4a1a,
+        0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.game-root {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    pointer-events: auto;
+}
+
+.game-root[hidden] {
+    display: none !important;
+}
+
+.game-root canvas {
+    display: block;
+}
+
+.btn-close-game {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 1001;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.35rem;
+    line-height: 1;
+    color: var(--text);
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.15s ease;
+}
+
+.btn-close-game:hover {
+    background: rgba(180, 60, 50, 0.85);
+}
